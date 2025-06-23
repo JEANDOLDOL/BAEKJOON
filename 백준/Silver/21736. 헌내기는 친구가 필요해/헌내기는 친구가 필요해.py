@@ -26,8 +26,8 @@ def dfs(x,y):
         if 0 <= nx < N and 0 <= ny < M and graph[nx][ny] != "X" and not visited[nx][ny]:
             dfs(nx,ny)
             
-for i in range(len(graph)):
-    for e in range(len(graph[0])):
+for i in range(N):
+    for e in range(M):
         if not visited[i][e] and graph[i][e] == "I":
             dfs(i,e)
 
